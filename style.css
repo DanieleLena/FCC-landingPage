@@ -35,7 +35,7 @@ ul {
     display: flex;
     align-content: center;
 }
-li {
+nav li {
     height: inherit;
     margin:0 30px;
     cursor: pointer;
@@ -43,7 +43,7 @@ li {
     align-items: center;
 
 }
-li:hover {
+nav li:hover {
     color: hsl(0, 94%, 66%);
     border-bottom: solid;
 }
@@ -62,11 +62,18 @@ li:hover {
     color: hsl(0, 94%, 66%);
     border-color: hsl(0, 94%, 66%);
 }
+
+/* main ================================================= */
+
+
 main {
     width: 90%;
     height: auto;
     margin: auto;
 }
+
+/* section ONE ==========================================*/
+
 .section-One {
     width: 100%;
     height: 90vh;
@@ -116,42 +123,77 @@ border-color: hsl(231, 69%, 60%);
     border-bottom-left-radius: 50%;
 }
 
+/* section TWO ==========================================*/
+
+
 .section-Two{
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 20px;
+    
+
 }
 .description-Two {
     width: 40%;
-    height: 30%;
+    height: auto;
     text-align: center;
     
 }
 .description-Two h2 {
     font-size: 2rem;
-    margin: 20px;
+    padding: 20px;
+    
+   
+}
+.description-Two p {
+    color: hsl(229, 8%, 60%);
+    
 }
 .tabs-Two {
-    border-bottom: solid;
+    width: 60%;
+    line-height: 80px;
+}
+.tabs-Two ul{
+    width: 100%;
+    border-bottom: 1px solid;
+    border-bottom-color: hsl(0, 28%, 90%)
+}
+.tabs-Two li{
+    width: 33%;
+    height: auto;
+    margin: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    
+}
+.tabs-Two li:hover {
+    color: red; 
+}
+ .selected {
+    border-bottom: 3px solid;
+    border-bottom-color:red;
 }
 .features-Two {
     width: 100%;
     height: 70%;
-    margin: 20px;
+    padding: 60px;
     display: flex;
     flex-direction: row;
     
 }
+
+
 .features-left-Two {
     width: 50%;
     z-index: 10;
 }
 .features-right-Two {
-    width: 50%;
-    padding: 10%;
+    width: 30%;
+    
 }
 .features-right-Two h2{
     font-size: 1.5rem;
@@ -159,7 +201,7 @@ border-color: hsl(231, 69%, 60%);
     margin-left: 0px;
 }
 .features-right-Two p{
-   color: hsl(229, 8%, 60%); ;
+   color: hsl(229, 8%, 60%); 
 }
 .btn-MoreInfo {
     margin-top: 20px;
@@ -167,20 +209,68 @@ border-color: hsl(231, 69%, 60%);
     background-color: hsl(231, 69%, 60%);
 }
 .image-Two{
-    width: auto;
+    width: 536px;
     z-index:1000;
-    background-color: hsl(229, 8%, 60%);
+    background-color: #E8EAF6;
 }
 .blueShape-Two{
     width: 40%;
-    height: 50%;
+    height: 45%;
     position: absolute;
     z-index: -10;
     
-    top: 850px;
+    top: 1060px;
     left: 0px;
     background-color: hsl(231, 69%, 60%);
 
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
+    border-top-right-radius: 40%;
+    border-bottom-right-radius: 30%;
+}
+
+/* section THREE ==========================================*/
+
+.section-Three {
+    width: 100%;
+    height: 100vh;
+    background-color: thistle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description-Three {
+    width: 40%;
+    height: auto;
+    text-align: center;
+    
+}
+.description-Three h2 {
+    font-size: 2rem;
+    padding: 20px;
+    
+   
+}
+.description-Three p {
+    color: hsl(229, 8%, 60%);
+}
+
+.cardsBox {
+    width: 75%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.card {
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: turquoise;
+
+    border: solid;
 }
