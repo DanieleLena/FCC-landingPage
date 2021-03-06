@@ -58,7 +58,7 @@ nav li:hover {
     outline: none;
     cursor: pointer;
 }
-.login:hover {
+.btn:hover {
     color: hsl(0, 94%, 66%);
     border-color: hsl(0, 94%, 66%);
 }
@@ -137,19 +137,19 @@ border-color: hsl(231, 69%, 60%);
     
 
 }
-.description-Two {
+.description {
     width: 40%;
     height: auto;
     text-align: center;
     
 }
-.description-Two h2 {
+.description h2 {
     font-size: 2rem;
     padding: 20px;
     
    
 }
-.description-Two p {
+.description p {
     color: hsl(229, 8%, 60%);
     
 }
@@ -204,6 +204,9 @@ border-color: hsl(231, 69%, 60%);
    color: hsl(229, 8%, 60%); 
 }
 .btn-MoreInfo {
+    width: 120px;
+    height: 50px;
+    padding: 10px;
     margin-top: 20px;
     color: white;
     background-color: hsl(231, 69%, 60%);
@@ -232,31 +235,19 @@ border-color: hsl(231, 69%, 60%);
 .section-Three {
     width: 100%;
     height: 100vh;
-    background-color: thistle;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.description-Three {
-    width: 40%;
-    height: auto;
-    text-align: center;
-    
-}
-.description-Three h2 {
-    font-size: 2rem;
-    padding: 20px;
-    
-   
-}
-.description-Three p {
-    color: hsl(229, 8%, 60%);
-}
+
 
 .cardsBox {
     width: 75%;
     height: 500px;
+    position: relative;
+    top: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -265,12 +256,122 @@ border-color: hsl(231, 69%, 60%);
 
 .card {
     width: 30%;
-    height: auto;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: turquoise;
+    background-color: white;
+    border-radius: 5%;
+    -webkit-box-shadow: 8px 14px 6px 6px rgba(0,0,0,0.65); 
+box-shadow: 0px 14px 16px 6px rgba(0,0,0,0.04);
+}
+.card svg {
+    position: relative;
+    top: 50px;
+}
+.card h3 {
+    position: relative;
+    top: 70px;
+}
+.card p {
+    position: relative;
+    top: 30px;
+}
+.dots {
 
-    border: solid;
+    top: 20px !important;
+}
+
+.card button {
+    width: 80%;
+    height: 50px;
+    margin: 20px;
+    margin-top: 0px;
+
+    background-color: hsl(231, 69%, 60%);
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+.card button:hover {
+    color: hsl(231, 69%, 60%); 
+    border-color:  hsl(231, 69%, 60%);
+    background-color: white;
+}
+
+.card:nth-child(2){
+    position: relative;
+    top: 50px;
+}
+.card:nth-child(3){
+    position: relative;
+    top: 100px;
+}
+
+/* section FOUR ==========================================*/
+
+.section-Four {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.questionsBox {
+    width: 50%;
+    height: auto;
+    border-bottom:solid  gainsboro;
+    margin: 80px;
+}
+
+
+.questionTitle {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-top: solid gainsboro;
+   
+}
+.questionTitle:hover {
+    color: hsl(0, 94%, 66%);
+}
+.questionTitle svg {
+    margin: 20px;
+}
+
+.question-text {
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: hsl(229, 8%, 60%);
+    font-size: 120px !important;
+}
+.show .question-text{
+    display: block;
+} 
+
+.svg-show {
+    transform: rotate(180deg);
+}
+.color-arrow {
+    stroke: hsl(0, 94%, 66%);
+}
+
+/* section FIVE ==========================================*/
+
+.section-Five {
+    width: 100%;
+    height: 50vh;
+    background-color: hsl(231, 69%, 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
