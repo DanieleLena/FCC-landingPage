@@ -1,7 +1,7 @@
 const tabs = document.querySelectorAll(".tabs");
 
 const imgContainer = document.querySelector(".image-Two");
-const textConatiner = document.querySelector(".features-right-Two");
+const textContainer = document.querySelector(".features-right-Two");
 
 
 
@@ -21,12 +21,12 @@ tabs.forEach(function(tab){
                 imgContainer.innerHTML = `<img class="feature__img hiddenImage" src="./images/illustration-features-tab-1.svg" alt="dashboard">`;
             },400);
             imgContainer.classList.add("firstTabImg");
-                textConatiner.innerHTML= `
+                textContainer.innerHTML= `
                 <h2>Bookmark in one click</h2>
                 <p>Organize your bookmarks however you like. Our simple drag-and-drop interface 
                   gives you complete control over.
                 </p>
-                <button type="button" class="btn btn-MoreInfo">More Info</button>`;
+                <button type="button" class="btn btn-MoreInfo btn-Blue">More Info</button>`;
            
             
             
@@ -38,11 +38,11 @@ tabs.forEach(function(tab){
                 imgContainer.innerHTML = `<img class="feature__img hiddenImage" src="./images/illustration-features-tab-2.svg" alt="dashboard">`;
             },400);
             imgContainer.classList.remove("firstTabImg");
-            textConatiner.innerHTML= `
+            textContainer.innerHTML= `
             <h2>Intelligent search</h2>
             <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.
             </p>
-            <button type="button" class="btn btn-MoreInfo">More Info</button>`;
+            <button type="button" class="btn btn-MoreInfo btn-Blue">More Info</button>`;
         
 
             tab.classList.add("selected");
@@ -52,11 +52,11 @@ tabs.forEach(function(tab){
                 imgContainer.innerHTML = `<img class="feature__img hiddenImage" src="./images/illustration-features-tab-3.svg" alt="dashboard">`;
             },400);
             imgContainer.classList.remove("firstTabImg");
-            textConatiner.innerHTML= `
+            textContainer.innerHTML= `
             <h2>Share your bookmarks</h2>
             <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.
             </p>
-            <button type="button" class="btn btn-MoreInfo">More Info</button>`;
+            <button type="button" class="btn btn-MoreInfo btn-Blue">More Info</button>`;
             tab.classList.add("selected");
 
         }
@@ -99,3 +99,29 @@ question.forEach(function(q){
 
     });
 });
+
+
+// SCROLL PAGE ===============================================================
+const navBar = document.querySelector(".navBar");
+const navBarHeight = navBar.getBoundingClientRect().height
+
+const links = document.querySelectorAll(".scroll-links");
+
+links.forEach(function(link){
+
+    link.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        const id = e.currentTarget.getAttribute("href").slice(1);
+
+        const element = document.getElementById(id);
+        const position = element.offsetTop - navBarHeight;
+
+        window.scrollTo({
+            left:0,
+            top: position,
+        });
+    })
+
+})
