@@ -122,6 +122,52 @@ links.forEach(function(link){
             left:0,
             top: position,
         });
-    })
+    });
 
-})
+});
+
+// ANIMATION CARDS =======================================================================================
+
+const cards = document.querySelectorAll(".card");
+
+
+
+cards.forEach(function(card){
+    card.addEventListener("mousemove", function(e){
+
+        card.style.transition = `none`;
+
+        let xAxis = (window.innerWidth / 2 - e.pageX) / 55;
+        let yAxis = (window.innerHeight / 2 - e.pageY) / 55;
+
+        if(yAxis > -26.4){
+           
+            card.style.transform = `rotateY(${-xAxis}deg) rotateX(${-yAxis}deg)`;
+
+        } else {
+        card.style.transform = `rotateY(${-xAxis}deg) rotateX(${yAxis}deg)`;
+        }
+
+        const logo = card.querySelector(".logo-browser");
+        const btn = card.querySelector(".card-btn");
+        const h3 = card.querySelector(".card-h3");
+        const p = card.querySelector(".card-p");
+
+
+
+        logo.style.transform = "translateZ(20px)";
+        btn.style.transform = "translateZ(30px)";
+        h3.style.transform = "translateZ(50px)";
+        p.style.transform = "translateZ(60px)";
+
+
+        
+
+    });
+
+    card.addEventListener("mouseleave", function(){
+
+        card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+        card.style.transition = `1s all`;
+    })
+});
